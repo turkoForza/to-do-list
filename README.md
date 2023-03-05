@@ -6,6 +6,6 @@
 <hr>
 
 <h3>Preview:</h3>
-<img src="screen.mp4">
+<img src="screen.gif">
 
-<a href="#">Click here to access live site</a>
+<a href="https://classy-capybara-3b4d01.netlify.app">Click here to access live site</a>
