@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+body {
+    background-image: linear-gradient(to bottom,
+            #c0f6ad,
+            #8befc2,
+            #59e3d9,
+            #3cd5eb,
+            #52c3f3,
+            #59c2f5,
+            #61c0f7,
+            #69bff8,
+            #52cffe,
+            #41dfff,
+            #46eefa,
+            #5ffbf1);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.notice{
+    position: absolute;
+    top: 0;
+    margin: 1rem;
+    padding: 1rem 0;
+    width: 80%;
+    background-color: rgba(172, 255, 47, 0.301);
+    text-align: center;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    display: none;
+    color: lightyellow;
+}
+
+#container {
+    margin: 5%;
+    padding: 1%;
+    width: 70%;
+    color: white;
+    font-family: "Fredoka One", cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    #toDo-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 70%;
+
+        input {
+            outline: none;
+            border: none;
+            height: 2rem;
+            border-radius: 0.5rem;
+
+            &:first-child {
+                flex: 5;
+                padding: 0 1rem;
+            }
+
+            &:nth-child(2),
+            &:last-child {
+                flex: 1;
+                cursor: pointer;
+                font-size: 1rem;
+                background: linear-gradient(#cde79d, #ece692);
+                color: white;
+                font-family: "Fredoka One", cursive;
+            }
+        }
+    }
+
+    .toDo-content {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1rem;
+            border-bottom: 1px solid whitesmoke;
+
+            h3 {
+                font-size: 1.5rem;
+                letter-spacing: 0.2rem;
+                color: black;
+            }
+
+            input {
+                width: 100%;
+                background-color: transparent;
+                height: 80%;
+                margin-right: 1rem;
+                font-size: 1.5rem;
+                color: lemonchiffon;
+                border: none;
+                display: none;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            &-buttons {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                i {
+                    font-size: 1.5rem;
+                    cursor: pointer;
+
+                    &:first-child {
+                        color: lemonchiffon;
+                    }
+
+                    &:last-child {
+                        color: tomato;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active {
+    display: block !important;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    .notice{
+        padding: 0.5rem;
+    }
+}
